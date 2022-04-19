@@ -2,6 +2,10 @@
     box-sizing: border-box
 }
 
+:root {
+    --color-accent: #0bff22
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -17,7 +21,7 @@ body {
 
 .bg-1 {
     background-image: url(1.webp);
-    background-color: #6124FFBA
+    background-color: #0000002E
 }
 
 h1 {
@@ -26,7 +30,7 @@ h1 {
 }
 
 .green {
-    color: #0bff22
+    color: var(--color-accent)
 }
 
 .container {
@@ -65,14 +69,23 @@ h1 {
     z-index: -1
 }
 
-input,
-button,
-.nobutton {
+.form-field {
     display: inline-block;
     padding: 13px;
     margin-bottom: 18px;
     width: 100%;
+    font-size: 18px;
     background: #eee;
+    color: #111;
     text-align: center;
     border: none
+}
+
+.button {
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.button:hover {
+    background: var(--color-accent);
 }
